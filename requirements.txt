@@ -1,0 +1,12 @@
+# Runtime dependencies. Versions below are the ones this project was tested with (Python 3.12).
+numpy==2.4.4
+opencv-python==4.13.0.92
+pandas==3.0.2
+pillow==12.1.1
+
+# Face detection + embeddings. dlib-bin ships prebuilt wheels (no C++ compiler / CMake needed on Windows).
+dlib-bin==20.0.1
+face_recognition_models==0.3.0
+click==8.3.1
+# NOTE: 'face-recognition' itself is installed separately with --no-deps (see README),
+# because it declares a source-build dependency on 'dlib' that dlib-bin already satisfies.

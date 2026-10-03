@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+# runtime data - never commit biometric data
+data/*.db
+data/user_settings.json
+logs/*.log*
+*.csv
+!tests/**/*.csv
+.idea/
+.vscode/
