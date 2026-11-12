@@ -65,6 +65,23 @@ python -c "import face_recognition; print('face_recognition OK')"
 If PowerShell blocks activation: `Set-ExecutionPolicy -Scope Process Bypass`. If `import face_recognition` complains about `pkg_resources`: `pip install "setuptools<81"`.
 > I verified this install route on Linux/Python 3.12. I could not run it on Windows, so if a wheel is unavailable for your Python version, use Python 3.11/3.12.
 
+
+### Prerequisites
+
+Before installing the project, ensure you have:
+
+- Windows with PowerShell.
+- Python 3.12 installed and accessible through the Python launcher.
+- pip package manager.
+- Project dependencies listed in `requirements.txt`.
+- Internet access for downloading Python packages.
+
+Verify Python installation:
+
+```powershell
+py -3.12 --version
+python -m pip --version
+
 ## 7. Run
 ```powershell
 python app.py
