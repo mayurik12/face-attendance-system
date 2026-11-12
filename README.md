@@ -52,6 +52,26 @@ tests/ (77 tests, no webcam needed)     docs/ (INTERVIEW_GUIDE.md, sample_empty.
 ```
 
 ## 6. Installation (Windows, PowerShell)
+
+### Prerequisites
+
+Before installing, ensure you have:
+
+- Windows with PowerShell.
+- Python 3.12 installed.
+- pip package manager.
+- Internet access.
+- Project dependencies in requirements.txt.
+
+Verify Python:
+
+```powershell
+py -3.12 --version
+python -m pip --version
+```
+
+### Installation steps
+
 ```powershell
 cd face_recognition_app
 py -3.12 -m venv .venv
@@ -61,34 +81,21 @@ pip install -r requirements.txt
 pip install face-recognition==1.3.0 --no-deps
 python -c "import face_recognition; print('face_recognition OK')"
 ```
-*Why two steps?* `face-recognition` depends on `dlib`, which normally compiles from source (needs Visual Studio C++ + CMake). `dlib-bin` provides the same `dlib` module as a prebuilt wheel, so installing `face-recognition` with `--no-deps` avoids the compiler entirely.
-If PowerShell blocks activation: `Set-ExecutionPolicy -Scope Process Bypass`. If `import face_recognition` complains about `pkg_resources`: `pip install "setuptools<81"`.
-> I verified this install route on Linux/Python 3.12. I could not run it on Windows, so if a wheel is unavailable for your Python version, use Python 3.11/3.12.
 
-
-### Prerequisites
-
-Before installing the project, ensure you have:
-
-- Windows with PowerShell.
-- Python 3.12 installed and accessible through the Python launcher.
-- pip package manager.
-- Project dependencies listed in `requirements.txt`.
-- Internet access for downloading Python packages.
-
-Verify Python installation:
+If PowerShell blocks activation:
 
 ```powershell
-py -3.12 --version
-python -m pip --version
-
-## 7. Run
-```powershell
-python app.py
+Set-ExecutionPolicy -Scope Process Bypass
 ```
-The sidebar has a Light/Dark mode toggle; the choice is saved (`FACEAPP_THEME=dark` also works).
-Optional configuration through environment variables, e.g. `$env:FACEAPP_RECOGNITION_THRESHOLD="0.45"; $env:FACEAPP_CAMERA_INDEX="1"; python app.py`
-Available keys: `RECOGNITION_THRESHOLD, REGISTRATION_SAMPLES, CAMERA_INDEX, FRAME_SCALE, PROCESS_EVERY_N_FRAMES, ATTENDANCE_COOLDOWN_SECONDS, MIN_FACE_SIZE, MIN_SHARPNESS, DB_PATH, LOG_DIR, LOG_LEVEL, THEME` (all prefixed `FACEAPP_`). The Settings dialog saves to `data/user_settings.json`.
+
+If you encounter a pkg_resources error:
+
+```powershell
+pip install "setuptools<81"
+```
+
+> Note: This installation route was verified on Linux/Python 3.12, not Windows. Windows compatibility may depend on available package wheels.
+
 
 ## 8. Registering a person
 1. **Register Person** → enter ID and Name (email, department optional) → **Start Capture**.
