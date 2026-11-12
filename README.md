@@ -117,4 +117,26 @@ Everything stays on the machine; no network calls. Only 128-number embeddings ar
 Liveness detection · SQLCipher encryption · CNN/YuNet detector for better angles · multiple cameras · role-based admin login · web dashboard · threshold calibration tool using labelled data · attendance reports/charts.
 
 ## 17. Author
-Your Name · MCA · your-email@example.com · github.com/your-username
+
+**Mayuri Kurhe**  
+MCA Graduate | Software Developer
+
+- GitHub: [@mayurik12](https://github.com/mayurik12)
+- Portfolio: [mayuri-portfolio-two.vercel.app](https://mayuri-portfolio-two.vercel.app)
+- Email: mayurikurhe8@gmail.com
+
+  ## 18. Contributing
+
+Contributions are welcome!
+
+1. Fork this repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Test your changes before submitting.
+5. Open a pull request with a clear description.
+
+Please ensure that changes preserve user privacy and do not expose biometric data.
+
+## 19. License
+
+Please refer to the repository's LICENSE file for licensing information.
